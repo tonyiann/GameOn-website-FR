@@ -26,16 +26,14 @@ p {
   padding: 0.5vw;
 }
 
-img {
-  padding-right: 1rem;
-}
-
 .topnav {
   overflow: hidden;
   margin: 3.5%;
+  margin-left: 2rem;
 }
 .header-logo {
     float: left;
+    margin-left: 2.5rem;
 }
 .main-navbar {
     float: right;
@@ -56,16 +54,31 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
 }
 
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  display: none;
 }
 
 .topnav .icon {
   display: none;
+  color: #fe142f;
+  font-size: 3rem;
+}
+
+button.btn-signup.modal-btn {
+  margin-top: 100px;
+}
+.hero-img img {
+  margin-bottom: -5rem;
+}
+
+p.copyrights {
+  margin-left: -3.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -90,25 +103,22 @@ img {
   }
 }
 
-
-
  @media screen and (max-width: 540px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
+    margin-top: 0px;
   }
 } 
-
 main {
   font-size: 130%;
   font-weight: bolder;
   color: black;
   padding-top: 0.5vw;
-  padding-left: 2vw;
+  padding-left: 4vw;
   padding-right: 2vw;
-  margin: 1px 20px 15px;
+  margin: 1px 10px 15px;
   border-radius: 2rem;
   text-align: justify;
 
@@ -222,6 +232,8 @@ input {
 }
 .formData[data-error-visible="true"]::after {
   opacity: 1;
+  margin-right: 145px;
+  display:contents;
 }
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
@@ -405,7 +417,6 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -436,16 +447,18 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: normal;
   white-space: nowrap;
 }
 .hero-text {
   width: 146%;
   font-weight: normal;
-  margin-top: 57px;
+  margin-top: 20px;
+  margin-bottom: -35px;
   padding: 0;
 }
+
 .btn-signup {
   outline: none;
   text-transform: capitalize;
@@ -479,6 +492,10 @@ footer {
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
+  .header-logo {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -495,12 +512,16 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 5rem;
     white-space: normal;
+    margin-bottom: 2rem;
+    margin-left: -1rem;
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0rem;
+    margin-left: -1rem;
   }
   .hero-img img {
     border-radius: 10px;
@@ -514,6 +535,9 @@ footer {
   .copyrights {
     margin-top: 50px;
     text-align: center;
+  }
+  button.btn-signup.modal-btn {
+    margin-top: 140px;
   }
 }
 
