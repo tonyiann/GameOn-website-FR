@@ -17,7 +17,7 @@
 
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="Logo.png" width="auto" height="auto" />
+      <img alt="logo" class="logo-game" src="Logo.png" width="auto" height="auto" />
     </div>
     <div class="main-navbar">
       
@@ -43,7 +43,7 @@
           </h1>
           <p class="hero-text">
             Vous aimez jouer ? Notre prochain évènement
-             gaming est ouvert
+             gaming <br class="br-1"> est ouvert
             aux réservations... 
             Places limitées !
           </p>
@@ -126,8 +126,8 @@
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
-                class="formData"
-                data-error="Vous devez choisir une option"
+                class="formData-ville"
+                data-error="Vous devez choisir une ville"
                 data-error-visible="false">
                 <input
                   class="checkbox-input"
@@ -227,8 +227,11 @@
               />
             </form>
             <div class="confirm-message" style="display: none;">
-              <p>Merci ! Votre réservation a été reçue.</p>
-              <input class="close-btn button" type="button" value="Fermer">
+              <p>Merci pour<br>votre inscription</p>
+              <input 
+              class="close-btn button" 
+              type="button" 
+              value="Fermer">
             </div>
           </div>
         </div>

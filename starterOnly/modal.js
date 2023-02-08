@@ -22,7 +22,7 @@ const locations = document.querySelectorAll('input[name = "location"]');
 const checkbox1 = document.getElementById('checkbox1');
 const form = document.getElementById('form');
 const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
-const confirmMessage = document.querySelector('.confirm-message')
+const confirmMessage = document.getElementsByClassName('close-btn button')
 
 // EVENT
 
@@ -41,6 +41,9 @@ function closeModal() {
   confirmMessage.style.display = 'none'
 }
 closeBtn[0].addEventListener('click', closeModal);
+
+
+
 
 
 
@@ -141,7 +144,7 @@ function validCheckbox1()
   }
 }
  
-// validation des champs
+//verifie les champs un par un 
 function verifChamps() {
     checkFirstName() 
     checkLastName() 
@@ -152,7 +155,7 @@ function verifChamps() {
     validCheckbox1()     
   }
 
-// validation form
+// validation form - valide si tout est bien renseigné
 function validationForm() {
   if
   (checkFirstName()===true && checkLastName()===true && ValidateEmail()===true && checkBirthdate()===true &&
@@ -166,18 +169,18 @@ function validationForm() {
 
 // // form validation//
 
-// 
+// au clique sur envoyé
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    console.log("dans le submit")
     if(validationForm()===true){
         form.reset();
+        // affiche le message d'inscription
         form.style.display ='none';
         document.querySelector('.confirm-message').style.display ='flex';
     }
     else
     {
-      console.log("dans le else")
       verifChamps();
     }
 })
+

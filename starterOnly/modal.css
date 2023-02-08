@@ -25,6 +25,9 @@ p {
   margin-bottom: 0;
   padding: 0.5vw;
 }
+.br-1 {
+  display: none;
+}
 
 .topnav {
   overflow: hidden;
@@ -110,7 +113,41 @@ p.copyrights {
     display: block;
     margin-top: 0px;
   }
+  .logo-game {
+    width: 10rem;
+    height: auto;
+    margin-left: -15px;
+  }
+  .topnav .icon {
+    display: none;
+    color: #fe142f;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+ }
+ h1.hero-headline {
+  font-size: 2.4rem;
+  font-weight: 500;
+ }
+ .br-1 {
+  display: flex;
+ }
+ p.hero-text {
+  font-size: 13px;
+  margin-top: -1rem;
+  margin-bottom: -2rem;
+ }
+ .modal-body {
+  margin-left: -4rem;
+  margin-top: 12rem;
+ }
+ p.copyrights {
+  margin-top: 0rem;
+ }
+ .confirm-message {
+  margin-left: -3rem;
+ }
 } 
+
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -180,7 +217,7 @@ main {
 }
 
 .content {
-  margin: 5% auto;
+  margin: 20% auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -194,8 +231,27 @@ main {
 }
 
 .modal-body {
-  padding: 15px 8%;
-  margin: 15px auto;
+  padding: 25px 8%;
+  margin-top: -1rem;
+  margin-left: -1rem;
+}
+.confirm-message {
+  display: flex;
+  margin-bottom: 18rem;
+  padding-left: 8rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 20rem;
+  
+}
+
+.close-btn.button {
+    position: absolute;
+    margin-left: 0rem;
+    margin-top: 37rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    cursor: pointer;
 }
 
 label {
@@ -220,7 +276,7 @@ input {
 }
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.4em;
+  font-size: 0.5em;
   color: #e54858;
   display: block;
   margin-top: 7px;
@@ -230,11 +286,32 @@ input {
   opacity: 0;
   transition: 0.3s;
 }
+.formData-ville[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.5em;
+  color: #e54858;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: right;
+  line-height: 0.3;
+  opacity: 0;
+  transition: 0.3s;
+}
+
 .formData[data-error-visible="true"]::after {
   opacity: 1;
   margin-right: 145px;
   display:contents;
 }
+
+.formData-ville[data-error-visible="true"]::after {
+  opacity: 1;
+  margin-right: 145px;
+  display:flex;
+}
+
+
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
@@ -447,7 +524,7 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: normal;
   white-space: nowrap;
 }
@@ -537,7 +614,7 @@ footer {
     text-align: center;
   }
   button.btn-signup.modal-btn {
-    margin-top: 140px;
+    margin-top: 120px;
   }
 }
 
